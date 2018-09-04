@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "dripstone"
+version = "0.1.0"
+description = ""
+authors = ["Isabella Muerte <63051+slurps-mad-rips@users.noreply.github.com>"]
+keywords = ["github", "labels"]
+
+[tool.poetry.dependencies]
+python = "*"
+keyring = "^13.2"
+PyGithub = "^1.40"
+tomlkit = "^0.4.4"
+pyyaml = "^3.13"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+sphinx = "^1.7"
+coverage = "^4.5"
+towncrier = "^18.6"
+
+[tool.towncrier]
+package = 'dripstone'
+package_dir = 'src'
+filename = 'CHANGELOG.md'
+directory = ".changelog"
+#template = ".changelog/template.md"
+issue_format = "#{issue}"
+start_line = "<!-- TOWNCRIER -->"
